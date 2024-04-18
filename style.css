@@ -1,0 +1,133 @@
+@font-face{
+    font-family: myFont;
+    src:url(Oaky-Regular.woff);
+}
+
+@keyframes myColorChange{
+    0%{background-color: cyan;}
+    33%{background-color: magenta;}
+    66%{background-color: yellow;}
+    99%{background-color: cyan;}
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(240,240,240);
+}
+
+main{
+    margin: 20px;
+}
+
+h1{
+    color: rgb(240,240,240);
+    background-color: black;
+    font-family: myFont;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: cyan;
+    padding: 0px;
+    padding-left: 20;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+
+    animation: myColorChange;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.navbar a:hover{
+    background-color: rgb(240,240,240);
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+}
+
+h3{
+    text-align: center;
+    font-family: myFont;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0p;
+    line-height: 0px;
+}
+
+p{
+    text-align: center;
+    padding: 10;
+    max-width: 65ch;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+  }
+
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .column a:hover{
+    opacity: 50%;
+  }
+
+button {
+    background-color: black;
+    font-size: 16px;
+    color: rgb(240,240,240);
+    padding: 10px;
+    margin: 5px;
+    border: 0px;
+  }
+
+footer {
+    text-align: center;
+    position: sticky;
+    background-color: black;
+    color: rgb(240,240,240);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0px;
+    overflow: hidden;
+  }
+
