@@ -3,13 +3,6 @@
     src:url(Oaky-Regular.woff);
 }
 
-@keyframes myColorChange{
-    0%{background-color: cyan;}
-    33%{background-color: magenta;}
-    66%{background-color: yellow;}
-    99%{background-color: cyan;}
-}
-
 body{
     margin: 0px;
     background-color: rgb(240,240,240);
@@ -20,56 +13,67 @@ main{
 }
 
 h1{
-    color: rgb(240,240,240);
-    background-color: black;
-    font-family: myFont;
-    font-size: 50px;
+    color: black;
+    background-color:  rgb(240,240,240);
+    font-family: myFont, Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
     text-align: center;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
+h1:hover{
+  color: blue;
+}
+
+
 .navbar ul{
     list-style-type: none;
-    background-color: cyan;
+    background-color: black;
     padding: 0px;
-    padding-left: 20;
     margin: 0px;
     overflow: hidden;
     text-align: center;
-
-    animation: myColorChange;
-    animation-iteration-count: infinite;
-    animation-duration: 6s;
 }
 
 .navbar a{
-    color: black;
+    color: rgb(240,240,240);
     text-decoration: none;
-    padding: 15px;
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 12px 30px;
     display: block;
 }
 
 .navbar a:hover{
-    background-color: rgb(240,240,240);
+    background-color:blue;
+    color: rgb(240,240,240);
 }
 
 .navbar li{
-    float: left;
+    display: inline-block;
 }
 
 .navbar {
     position: sticky;
     top: 0px;
+    z-index: 1000;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: blue;
+  color: rgb(240,240,240);
 }
 
 h3{
     text-align: center;
-    font-family: myFont;
-    font-size: 30px;
-    padding: 10px;
+    color: black;
+    font-family: myFont, Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    padding: 0px;
     margin: 0p;
-    line-height: 0px;
+    line-height: 0px;    
 }
 
 p{
@@ -78,6 +82,12 @@ p{
     max-width: 65ch;
     margin: 0 auto;
     font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
   .column {
@@ -89,6 +99,20 @@ p{
   
   /* Clear floats after image containers */
   .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .column2 {
+    float: left;
+    width: 33%;
+    padding: 0px;
+  }
+
+  
+  /* Clear floats after image containers */
+  .row2::after {
     content: "";
     clear: both;
     display: table;
@@ -108,26 +132,70 @@ p{
   }
 
   .column a:hover{
-    opacity: 50%;
+    opacity: 30%;
   }
 
-button {
+  .center3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.button {
     background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
     font-size: 16px;
+    padding: 10px 25px;
     color: rgb(240,240,240);
-    padding: 10px;
-    margin: 5px;
-    border: 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px auto;
+  }
+
+  .button:hover{
+    background-color: blue;
   }
 
 footer {
     text-align: center;
     position: sticky;
-    background-color: black;
+    background-color: blue;
     color: rgb(240,240,240);
     padding-bottom: 20px;
     padding-top: 20px;
-    margin: 0px;
+    margin-top: 20px;
     overflow: hidden;
   }
 
+  @media screen and (max-width: 900px){
+    .column, .singleimage, .column2{
+      width: 100%;
+    }
+    
+  }
+
+  div.cursors div {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    background-color: none;
+    z-index: 999;
+    pointer-events: none;
+
+  }
+
+  div.cursors div span {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    width: 300px;
+    line-height: 90px;
+
+    font-size: 100px;
+    font-family: myFont, Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+  }
+
+  
